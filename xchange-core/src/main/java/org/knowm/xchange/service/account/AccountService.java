@@ -1,6 +1,7 @@
 package org.knowm.xchange.service.account;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 import org.knowm.xchange.Exchange;
@@ -25,7 +26,7 @@ import org.knowm.xchange.service.trade.params.WithdrawFundsParams;
  * <p>The implementation of this service is expected to be based on a client polling mechanism of
  * some kind
  */
-public interface AccountService extends BaseService {
+public interface AccountService extends BaseService, Serializable{
 
   /**
    * Get account info
