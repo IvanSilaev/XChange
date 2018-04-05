@@ -1,10 +1,8 @@
 package org.knowm.xchange;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +17,7 @@ import org.knowm.xchange.service.trade.TradeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class BaseExchange implements Exchange {
+public abstract class BaseExchange implements Exchange, Serializable {
 
   protected final Logger logger = LoggerFactory.getLogger(getClass());
   protected ExchangeSpecification exchangeSpecification;
